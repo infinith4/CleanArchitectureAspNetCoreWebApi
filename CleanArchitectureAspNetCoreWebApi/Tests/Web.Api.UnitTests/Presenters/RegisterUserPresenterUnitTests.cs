@@ -18,7 +18,7 @@ namespace Web.Api.UnitTests.Presenters
             presenter.Handle(new RegisterUserResponse("", true));
 
             // assert
-            Assert.Equal((int)HttpStatusCode.OK,presenter.ContentResult.StatusCode);
+            Assert.Equal((int)HttpStatusCode.OK, presenter.ContentResult.StatusCode);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace Web.Api.UnitTests.Presenters
             // assert
             dynamic data = JsonConvert.DeserializeObject(presenter.ContentResult.Content);
             Assert.True(data.success.Value);
-            Assert.Equal("1234",data.id.Value);
+            Assert.Equal("1234", data.id.Value);
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace Web.Api.UnitTests.Presenters
             var presenter = new RegisterUserPresenter();
 
             // act
-            presenter.Handle(new RegisterUserResponse(new [] {"missing first name"}));
+            presenter.Handle(new RegisterUserResponse(new[] { "missing first name" }));
 
             // assert
             dynamic data = JsonConvert.DeserializeObject(presenter.ContentResult.Content);

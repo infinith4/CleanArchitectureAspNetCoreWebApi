@@ -1,4 +1,4 @@
-﻿ 
+﻿
 
 namespace Web.Api.Core.Dto
 {

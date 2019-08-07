@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
- 
+
 
 namespace Web.Api.Infrastructure.Data.EntityFramework
 {
